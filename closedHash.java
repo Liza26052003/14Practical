@@ -15,11 +15,13 @@ public class closedHash{
     }
     public closedHash(int size) {
         this.size = size;
-        Keys = new LinkedList[size];
+        Keys = new LinkedList[size+1];
         for (int i = 0; i < size; i++) {
             Keys[i] = new LinkedList<>();
         }
-    } 
+    }
+    public int hash(String key) {
+        return ((Math.abs(key.hashCode())) % size)+1;
 
 
 
