@@ -34,7 +34,7 @@ public class openHash{
         }
         long t1 = System.nanoTime();
 
-        System.out.printf("Inserted %d entries in %.2f ms\n", table.size(), (t1 - t0) / 1e6);
+        System.out.printf("Inserted %d entries in %.2f ms\n", table.size(), (t1 - t0) / 16);
         System.out.printf("Table size: %d, load factor: %.4f\n", table.capacity(), table.loadFactor());
 
         // Verify lookups for all inserted keys
