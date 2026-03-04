@@ -7,13 +7,11 @@ public class OpenHash {
     static final String DELETED = "##DELETED##";
 
     public static void main(String[] args) {
-        // 1. Setup Data
         String[] keys = new String[N];
         for (int i = 0; i < N; i++) keys[i] = "K" + i;
         List<String> list = Arrays.asList(keys);
         Collections.shuffle(list);
-
-        // 2. Run Experiment (950k items)
+        
         int limit = 950_000;
         long t0 = System.currentTimeMillis();
         for (int i = 0; i < limit; i++) {
