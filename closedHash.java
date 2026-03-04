@@ -31,9 +31,14 @@ public class closedHash{
         }
     Keys[index].add(new Node(key, value));
     }
-
-
-
+    public String get(String key){
+        index = hash(key);
+        for (Node node : Keys[index]){
+            if (node.key.equals(key))
+            return node.value;
+        }
+        return null;
+    }
 
 
 
