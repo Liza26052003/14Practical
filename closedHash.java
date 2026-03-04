@@ -21,7 +21,16 @@ public class closedHash{
         }
     }
     public int hash(String key) {
-        return ((Math.abs(key.hashCode())) % size)+1;
+        return ((Math.abs(key.hashCode())) % size)+1;}
+
+    public void put(String key, String value){
+        index = hash(key);
+        for (Node node : Keys[index]){
+            if (node.key.equals(key))
+            node.value = value;
+        }
+    Keys[index].add(new Node(key, value));
+    }
 
 
 
